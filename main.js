@@ -7,6 +7,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1280,
     height: 400,
+    frame: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -20,6 +21,27 @@ function createWindow () {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  // init request
+  // var options = {
+  //   'method': 'GET',
+  //   'url': 'http://dev-apis.981park.net:80/lab981/admin/game',
+  //   'headers': {
+  //     'Content-Type': 'application/json',
+  //     'Authorization': 'Bearer 497dbdf4-1832-4767-8bba-d5e4f1e7cd2e'
+  //   },
+  //   body: JSON.stringify({
+  //     "pageNo": 1,
+  //     "pageRows": 20
+  //   })
+
+  // };
+  // net.request(options, function (error, response) {
+  //   if (error) throw new Error(error);
+  //   console.log(response.body);
+  // });
+  // console.log(net.isOnline());
+
 }
 
 // This method will be called when Electron has finished
