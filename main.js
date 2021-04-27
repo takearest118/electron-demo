@@ -12,7 +12,8 @@ function createWindow () {
     }
   })
 
-  mainWindow.maximize();
+  mainWindow.setFullScreen(true);
+  mainWindow.isKiosk(true);
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
